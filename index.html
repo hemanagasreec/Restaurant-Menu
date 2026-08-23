@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>StarBucks</title>
+    <style>
+      body{
+        font-family: Arial,sans-serif;
+        margin: 0;
+        background-color: #f7f7f2;
+      }
+
+      header{
+        text-align: center;
+        padding: 20px;
+        background-color: #f5f1e8;
+      }
+
+      header h1{
+        color: #006241;
+      }
+
+      nav{
+        margin-top: 15px;
+      }
+
+      nav a{
+        margin: 10px;
+        text-decoration: none;
+        color: #006241;
+        font-weight: bold;
+      }
+
+      article{
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        max-width:400px;
+        box-shadow: 0 4px 10px #ddd;
+        background-color: white;
+      }
+
+      article img{
+        width: 150px;
+        border-radius: 10px;
+      }
+
+      article:hover {
+        transform: translateY(-5px);
+      }
+
+      form{
+        margin: 20px;
+      }
+
+      form input,
+      form textarea {
+        margin: 5px;
+      }
+
+      footer{
+        text-align: center;
+        margin-top:30px;
+        padding: 20px;
+      }
+
+      #menu{
+        text-align: center;
+      }
+
+      .menu-items {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    
+      }
+
+      #menu h2,
+      #order-form h2 {
+        color: #006241;
+      }
+
+      #order-form{
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 20px;
+      }
+
+      input[type="number"] {
+        width: 60px;
+        padding: 5px;
+      }
+
+      textarea {
+        padding: 10px;
+        border-radius: 5px;
+        width: 90%;
+        max-width: 400px;
+      }
+
+      input[type="submit"] {
+        display: block;
+        margin: 30px auto;
+        padding: 10px 25px;
+        border: none;
+        border-radius: 5px;
+        background-color: #006241;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #004d33;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #006241;
+        color: white;
+      }
+
+      .order-item {
+        margin: 25px 0;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0 2px 8px #ddd;
+      }
+
+      .order-item h3 {
+        color: #006241;
+        margin-top: 0;
+      }
+
+      .order-item label {
+        margin-right: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img id="header-img" src="https://www.starbucks.in/assets/icon/logo.png" alt="Starbucks Logo">
+      <h1>Welcome to StarBucks</h1>
+      <nav>
+        <a href="#menu">Menu</a>
+        <a href="#order-form">Place Your Order</a>
+      </nav>
+    </header>
+    <main>
+      <section id="menu">
+        <h2>Menu</h2>
+        <div class="menu-items" >
+          <article>
+          <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/100419.jpg" alt="Cappuccino">
+          <h3>Cappuccino</h3>
+          <p>
+            Dark, Rich in flavour espresso lies in wait under a smoothed and stretched layer of thick foam. It's truly the height of our baristas' craft.<br>
+            <i>Price: ₹ 336.00</i>
+          </p>
+        </article>
+        <article>
+          <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/100433.jpg" alt="Caffe Americano">
+          <h3>Caffe Americano</h3>
+          <p>
+            Rich in flavour, full-bodied espresso with hot water in true European style.<br>
+             <i>Price: ₹ 325.50</i>
+          </p>
+        </article>
+        <article>
+          <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/103515.jpg" alt="Double Chocolate Chip Frappuccino">
+          <h3>Double Chocolate Chip Frappuccino</h3>
+          <p>
+            Rich mocha-flavored sauce meets up with chocolaty chips, milk and ice. Top it off with whipped vanilla topping and mocha drizzle for a real party in your mouth. A coffee Free Delight<br>
+             <i>Price: ₹ 477.75</i>
+          </p>
+        </article>
+        </div>
+      </section>
+      <section id="order-form">
+        <h2>Place Your Order</h2>
+        <form>
+          <div class="order-item">
+            <h3>Cappuccino</h3>
+
+            <label for="cappuccino" >Quantity:</label>
+            <input type="number" id="cappuccino" name="cappuccino" min="0">
+            <p>Choose your size:</p>
+            
+            <label for="capp-small">Small</label>
+            <input type="radio" id="capp-small" name="capp-size" value="small">
+
+            <label for="capp-medium" >Medium</label>
+            <input type="radio" id="capp-medium" name="capp-size" value="medium" >
+
+            <label for="capp-large" >Large</label>
+            <input type="radio" id="capp-large" name="capp-size" value="large">
+
+            <p>Add-ons:</p>
+
+            <label for="whipped" >Whipped Cream</label>
+            <input type="checkbox" id="whipped" name="capp-addon" value="whipped">
+
+            <label for="chocolate" >ChocolateSyrup</label>
+            <input type="checkbox" id="chocolate" name="capp-addon" value="chocolate">
+
+            <label for="capp-requests" >Special Requests</label><br>
+            <textarea id="capp-requests" name="capp-requests" rows="4" cols="40"></textarea>
+            <br><br>
+          </div>
+          <!-- this is for caffe americano -->
+          <div class="order-item">
+            <h3>Caffe Americano</h3>
+
+            <label for="caffe" >Quantity:</label>
+            <input type="number" id="caffe" name="caffe-Americano" min="0">
+            <p>Choose your size:</p>
+            
+            <label for="americano-small">Small</label>
+            <input type="radio" id="americano-small" name="americano-size" value="small">
+
+            <label for="americano-medium" >Medium</label>
+            <input type="radio" id="americano-medium" name="americano-size" value="medium" >
+
+            <label for="americano-large" >Large</label>
+            <input type="radio" id="americano-large" name="americano-size" value="large">
+
+            <p>Add-ons:</p>
+
+            <label for="Lesssweet" >Hazelnut Less Sweet</label>
+            <input type="checkbox" id="Lesssweet" name="americano-addon" value="Lesssweet">
+
+            <label for="Unsweetened" >Hazelnut Unsweetened</label>
+            <input type="checkbox" id="Unsweetened" name="americano-addon" value="Unsweetened">
+
+            <label for="americano-requests" >Special Requests</label><br>
+            <textarea id="americano-requests" name="americano-requests" rows="4" cols="40"></textarea>
+            <br><br>
+          </div>
+           <!-- this is for double choco -->
+          <div class="order-item">
+              <h3>Double Chocolate Chip Frappuccino</h3>
+
+              <label for="doublechoco" >Quantity:</label>
+              <input type="number" id="doublechoco" name="Double-Chocolate-Chip-Frappuccino" min="0">
+              <p>Choose your size:</p>
+              
+              <label for="frap-small">Small</label>
+              <input type="radio" id="frap-small" name="frap-size" value="small">
+
+              <label for="frap-medium" >Medium</label>
+              <input type="radio" id="frap-medium" name="frap-size" value="medium" >
+
+              <label for="frap-large" >Large</label>
+              <input type="radio" id="frap-large" name="frap-size" value="large">
+
+              <p>Add-ons:</p>
+
+              <label for="frap-whipped" >Whipped topping</label>
+              <input type="checkbox" id="frap-whipped" name="frap-addon" value="whipped">
+
+              <label for="syrup" >Syrup and Sauces</label>
+              <input type="checkbox" id="syrup" name="frap-addon" value="syrup">
+
+              <label for="frap-requests" >Special Requests</label><br>
+              <textarea id="frap-requests" name="frap-requests" rows="4" cols="40"></textarea>
+              <br><br>
+
+          </div>
+          <input type="submit" value="Go To Checkout">
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Made with love by Chickeyy
+      </p>
+    </footer>
+  </body>
+</html>
