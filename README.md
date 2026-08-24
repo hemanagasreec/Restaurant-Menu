@@ -5,7 +5,7 @@ This is a simple restaurant menu website created using HTML and CSS.
 ## Features
 
 - Restaurant menu
-- Food and drinks
+- Beverages-drinks
 - Prices
 - Simple and clean design
 
